@@ -6,10 +6,10 @@ Feature: Searching computers
   Scenario Outline: Searching computers by company keyword
     Given I load the computer database homepage
     When I search computers with <company> keyword
+    And I smurf a smurf
     Then I should see a list of computer names all containing <company>
     And I should see <message> as counting message
     
-
     Examples: 
       | company  | message 						  |
       | "Apple"  | "13 computers found" |

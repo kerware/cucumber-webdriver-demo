@@ -86,10 +86,18 @@ public class SearchComputersStepDefinitions {
 		_webOps.waitFor(SPEED_PERIOD_MS);
 	}
 	
+	
+	@When("I smurf a smurf")
+	public void i_smurf_a_smurf() {
+	    System.out.println("Passe par smurf a smurf");
+	}
+	
+	
+	
 	// On utilise les annotations Cucumber JUNIT Like !
 	@BeforeAll
 	public static void setup() {
-		_context = new Context( new ComputerDBRepository(), Context.Browser.FIREFOX, true );
+		_context = new Context( new ComputerDBRepository(), Context.Browser.CHROME, true );
 		_webOps = _context.getWebOperations();
 		_webOps.maximizeBrowserWindow();
 	}
