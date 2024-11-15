@@ -15,6 +15,7 @@ public class ComputerSearchPage  {
 	}
 	
 	public void searchComputersByNameContaining( String keyword ) {
+		// Effectue la recherhce par mot clé
 		_webOp.type("txtFilter", keyword, true);
 		_webOp.click("btnFilter");
 	}
